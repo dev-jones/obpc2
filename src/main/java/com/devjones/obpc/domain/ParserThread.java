@@ -1,5 +1,8 @@
 package com.devjones.obpc.domain;
 
+import com.devjones.obpc.domain.Product;
+import com.devjones.obpc.util.LowestPriceCash;
+
 public class ParserThread implements Runnable {
 
 	private String product;
