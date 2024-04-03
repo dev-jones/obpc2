@@ -32,8 +32,10 @@ public class TextParserController {
 				ParserThread pt = new ParserThread(query[i], prod);
 				Thread t = new Thread(pt);
 				t.start();
+				t.join();
 				result = pt.getProd().getTotal();
 			}
+
 
 			System.out.println("최저가: " + result);
 			return "최저가: " + result;
