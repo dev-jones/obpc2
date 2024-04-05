@@ -1,5 +1,7 @@
 package com.devjones.obpc.domain;
 
+import lombok.SneakyThrows;
+
 public class ParserThread implements Runnable {
 
 	private String product;
@@ -9,7 +11,8 @@ public class ParserThread implements Runnable {
 		this.product = product;
 		this.prod = prod;
 	}
-	
+
+	@SneakyThrows
 	public void run() {
 		LowestPriceCash lpc = new LowestPriceCash();
 		

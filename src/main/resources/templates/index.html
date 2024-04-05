@@ -26,13 +26,15 @@
     });
 
     function valueParser(_val) {
+        var val = JSON.stringify({
+            data: _val
+        });
+
 
         $.ajax({
-            type : "GET",
+            type : "POST",
             url : "/textparser",
-            data : {
-                "data": _val
-            },
+            data : val,
             async: false,
             contentType : "application/json; charset:UTF-8",
             success : function(res){
