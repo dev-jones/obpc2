@@ -2,6 +2,29 @@ package test2;
 
 import com.devjones.obpc.domain.LowestPriceCash;
 
+/*
+갤럭시 GALAX 지포스 RTX 4060 Ti OC D6 8GB
+AMD 라이젠5-5세대 7500F (라파엘) (멀티팩(정품))
+ASRock B650M-HDV/M.2 대원씨티에스
+삼성전자 DDR5-5600 (16GB) PC5-44800
+갤럭시 GALAX 지포스 RTX 4060 Ti OC D6 8GB
+AMD 라이젠5-5세대 7500F (라파엘) (멀티팩(정품))
+ASRock B650M-HDV/M.2 대원씨티에스
+삼성전자 DDR5-5600 (16GB) PC5-44800
+갤럭시 GALAX 지포스 RTX 4060 Ti OC D6 8GB
+AMD 라이젠5-5세대 7500F (라파엘) (멀티팩(정품))
+ASRock B650M-HDV/M.2 대원씨티에스
+삼성전자 DDR5-5600 (16GB) PC5-44800
+갤럭시 GALAX 지포스 RTX 4060 Ti OC D6 8GB
+AMD 라이젠5-5세대 7500F (라파엘) (멀티팩(정품))
+ASRock B650M-HDV/M.2 대원씨티에스
+삼성전자 DDR5-5600 (16GB) PC5-44800
+갤럭시 GALAX 지포스 RTX 4060 Ti OC D6 8GB
+AMD 라이젠5-5세대 7500F (라파엘) (멀티팩(정품))
+ASRock B650M-HDV/M.2 대원씨티에스
+삼성전자 DDR5-5600 (16GB) PC5-44800
+
+ */
 public class NoFutureTestMain {
 
 	public static void main(String[] args) {
@@ -41,5 +64,10 @@ public class NoFutureTestMain {
 		long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
 		long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
 		System.out.println("시간차이(m) : "+secDiffTime);
+
+		/**
+		 * result: 3650000
+		 * 시간차이(m) : 25370
+		 */
 	}
 }

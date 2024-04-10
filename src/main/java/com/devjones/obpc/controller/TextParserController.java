@@ -21,6 +21,8 @@ public class TextParserController {
 	@PostMapping("/textparser")
 	public ResponseEntity<ApiResponseUtil.ApiResponse<Object>> result(@RequestBody TextParserDto data) {
 		return handleApi(() -> {
+			long beforeTime = System.currentTimeMillis(); //코드 실행 전에 시간 받아오기
+
 			int result = 0;
 			Product prod = new Product();
 			String[] query = data.getData().split("\\n");
@@ -37,6 +39,19 @@ public class TextParserController {
 
 			result = prod.getTotal();
 			System.out.println("최저가: " + result);
+
+			long afterTime = System.currentTimeMillis(); // 코드 실행 후에 시간 받아오기
+			long secDiffTime = (afterTime - beforeTime); //두 시간에 차 계산
+			System.out.println("시간차이(m) : "+secDiffTime);
+
+			/**
+			 * 최저가: 3650000
+			 * 시간차이(m) : 1521
+			 *
+			 * 멀티스레드 없었으면..
+			 * 25370 ms 걸렸음
+			 */
+
 			return "최저가: " + result;
 		});
 	}
