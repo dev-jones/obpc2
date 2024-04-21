@@ -2,11 +2,13 @@ package com.devjones.obpc.domain;
 
 import java.io.IOException;
 
+import lombok.extern.slf4j.Slf4j;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+@Slf4j
 public class LowestPriceCash {
 
 	/**
@@ -31,6 +33,7 @@ public class LowestPriceCash {
 			url = e.attr("href");
 		}catch(Exception e) {
 			System.out.println("파싱할 요소없음");
+			log.info("파싱할 요소없음");
 			return 0;
 		}
 		
@@ -43,8 +46,10 @@ public class LowestPriceCash {
 		try {
 			Element e1 = doc.getElementById("lowPriceCash");
 		
-		System.out.println("상품명 : " + query);
-		System.out.println("최저가(현금) : " + e1.getElementsByClass("prc_c").text());
+//		System.out.println("상품명 : " + query);
+//		System.out.println("최저가(현금) : " + e1.getElementsByClass("prc_c").text());
+			log.info("상품명 : {}", query);
+			log.info("최저가(현금) : {}", e1.getElementsByClass("prc_c").text());
 		
 		String prc= e1.getElementsByClass("prc_c").text();
 
@@ -52,7 +57,8 @@ public class LowestPriceCash {
 		
 		
 		}catch(NullPointerException npe) {
-			System.out.println("데이터없음");
+//			System.out.println("데이터없음");
+			log.error("데이터없음: ", query);
 			return 0;
 		}
 	}

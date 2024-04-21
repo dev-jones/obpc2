@@ -9,6 +9,31 @@
 
 
 ☆ 제품을 입력해주세요 ☆<br>
+
+ex)
+<br>
+↓↓↓클릭하여 복사하기↓↓↓
+<br>
+<textarea rows="20" cols="50" readonly onclick="copy(this);" id="sample">
+[AMD5세대] R5 7500F 터보 5.0GHz (6코어)
+
+[마이크로닉스] MA-410 (WHITE)
+
+32GB DDR5-5600 (16Gx2) CL46 Crucial [마이크론]
+
+[ASRock] A620M-HDV M.2 (HDMI / DP)
+
+지포스 RTX 4060 Ti WINDFORCE OC [GIGABYTE]
+
+CN600 PRO M.2 NVMe (512GB) [COLORFUL]
+
+[몬스타] X220M (화이트)
+
+정격출력 : 600W / EcoMax [잘만]
+</textarea>
+<br>
+↓↓↓여기에 붙여넣기↓↓↓
+<br>
 <textarea rows="15" cols="50" id="command"></textarea><br>
 <button id="query">최저가</button><br>
 ↓↓↓↓↓↓↓↓결과↓↓↓↓↓↓↓↓<br>
@@ -44,6 +69,13 @@
                 alert("통신 실패.");
             }
         });
+    }
+
+    function copy(e) {
+
+        console.log($(e).val());
+
+        $('#command').val($(e).val());
     }
 
 </script>
