@@ -6,8 +6,8 @@
     <property name="ROLLING_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss.SSS}  %logger{5} - %msg %n" />
     <property name="FILE_NAME" value="/app/logs/obpc_log.log" />
     <property name="LOG_NAME_PATTERN" value="/app/logs/application-%d{yyyy-MM-dd-HH-mm}.%i.log" />
-    <property name="MAX_FILE_SIZE" value="100MB" />
-    <property name="TOTAL_SIZE" value="300MB" />
+    <property name="MAX_FILE_SIZE" value="1GB" />
+    <property name="TOTAL_SIZE" value="1GB" />
     <property name="MAX_HISTORY" value="30" />
 
 
